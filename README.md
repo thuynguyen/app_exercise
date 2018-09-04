@@ -16,3 +16,6 @@ Clone this repository, run the spec and write the code that makes all the tests 
 * Don't fork the repository to not share the response with others.
 
 * When you finish, send the URL of your repository.
+
+**I have some explanations :**
+* For checking doublons job run in twice, I have to create jobs db table to track it since I used to ActiveJob. If I use Sidekiq gem as old rails version, I can get all jobs in queue, and compare arguments directly on sidekiq jobs, don't need to create local jobs tables.
